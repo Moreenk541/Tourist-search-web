@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist-search-web</title>
+</head>
+<body>
+
+    <h1>ExploreNow:</h1>
+    <div id="search-container">
+     <form id="searchForm">
+        <label for="seasons">Choose a season</label>
+        <select name="seasons" id="season">
+            <option value="summer">Summer</option>
+            <option value="spring">Spring</option>
+            <option value="autumn">Autumn</option>
+            <option value="winter">Winter</option>
+        </select>
+
+        <label for="weather">Weather</label>
+        <select name="weather" id="weather">
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="clear">Clear</option>
+            <option value="snow">Snow</option>
+        </select>
+
+        <label for="interest">Choose your interest</label>
+        <select name="interest" id="interest">
+            <option value="adventure">Adventure</option>
+            <option value="nature">Nature</option>
+            <option value="culture">Culture</option>
+            <option value="food">Food</option>
+            <option value="relaxation">Relaxation</option>
+        </select>
+
+        <button type="submit">Search</button>
+
+     </form>
+     </div>
+     <div id="results">
+        <h2>Suggested Destinations</h2>
+        <div id="places"></div>
+        <div id="events"></div>
+    </div>
+
+
+    
+</body>
+</html>
