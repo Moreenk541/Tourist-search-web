@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchForm = document.getElementById('searchForm');
-    const season= document.getElementById('season');
-    const interest = document.getElementById('interest');
+    const seasonSelect= document.getElementById('season');
+    const interestSelect = document.getElementById('interest');
     const resultsContainer = document.getElementById('places');
     const title = document.getElementById('title');
     const searchContainer = document.getElementById('search-container');
@@ -18,17 +18,47 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Filter and display destinations
-    async function  displayDestination(event){
+    async function  search(event){
         event.preventDefault();
-        const seasons = season.value;
-        const interests =interest.value;
+        const season = seasonSelect.value;
+        const interest =interestSelect.value;
 
-
-
-
-        
+        const destinations = await fetchDestinations();
+        if (!destinations) return;
+         
+        const filteredDestinations = destinations.filter(dest =>
+            dest.season.toLowerCase() === season.toLowerCase() &&
+              dest.interest.toLowerCase() === interest.toLowerCase()
+        );
+        displayResults(filteredDestinations)
+       
     }
-        
+    //display results
+    function displayResults(destinations) {
+        resultsContainer.innerHTML = '';
+        if (!destinations.length) {
+            resultsContainer.innerHTML = '<h3 style="color:white;">No matching destinations found.</h3>';
+            return;
+        }
+        destinations.forEach(dest =>{
+            const destinationElement = document.createElement('div');
+            destinationElement.classList.add('destination')
+            destinationElement.innerHTML =`
+                <h2>Name:${dest.name}</h2>
+                <h3>Country:${dest.country}</h3>
+                <p style="font-weight: bold;">Season: ${dest.season}</p>
+                <p style="font-weight: bold;">Interest: ${dest.interest}</p>
+
+
+            `;
+            resultsContainer.appendChild(destinationElement)
+        })
+
+    }
+    searchForm.addEventListener('submit', search);
+
+
+    
 
 
 }) 
