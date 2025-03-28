@@ -51,3 +51,13 @@ option:hover{
     text-align: center;
     color: black;
 }
+#imageview{
+    display:none ;
+   margin: auto;
+}
+.destination{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}

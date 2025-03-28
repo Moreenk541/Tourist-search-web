@@ -4,6 +4,7 @@
             "name": "Swiss Alps",
             "country": "Switzerland",
             "season": "Winter",
+            "image": "./Swiss Alps.jpg",
             "interest": "Adventure",
             "lat": 46.8182,
             "lon": 8.2275
@@ -12,6 +13,7 @@
             "name": "Lapland",
             "country": "Finland",
             "season": "Winter",
+            "image": "./Lapland.jpeg",
             "interest": "Nature",
             "lat": 67.9222,
             "lon": 26.5046
@@ -20,6 +22,7 @@
             "name": "Paris",
             "country": "France",
             "season": "Spring",
+            "image": "./paris.webp",
             "interest": "Culture",
             "lat": 48.8566,
             "lon": 2.3522
@@ -28,6 +31,7 @@
             "name": "Amsterdam",
             "country": "Netherlands",
             "season": "Spring",
+            "image": "./Amsterdam.jpeg",
             "interest": "Culture",
             "lat": 52.3676,
             "lon": 4.9041
@@ -36,6 +40,7 @@
             "name": "Santorini",
             "country": "Greece",
             "season": "Summer",
+            "image": "./Santorini.jpeg",
             "interest": "Relaxation",
             "lat": 36.3932,
             "lon": 25.4615
@@ -44,6 +49,7 @@
             "name": "Bali",
             "country": "Indonesia",
             "season": "Summer",
+            "image": "./Bali.jpeg",
             "interest": "Adventure",
             "lat": -8.3405,
             "lon": 115.092
@@ -52,6 +58,7 @@
             "name": "Kyoto",
             "country": "Japan",
             "season": "Autumn",
+            "image": "./kyoto.jpeg",
             "interest": "Culture",
             "lat": 35.0116,
             "lon": 135.7681
@@ -60,6 +67,7 @@
             "name": "New England",
             "country": "USA",
             "season": "Autumn",
+            "image": "./New England.jpeg",
             "interest": "Nature",
             "lat": 42.4072,
             "lon": -71.3824
