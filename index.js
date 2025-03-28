@@ -47,42 +47,51 @@ document.addEventListener('DOMContentLoaded', () => {
             const destinationElement = document.createElement('div');
             destinationElement.classList.add('destination')
             destinationElement.innerHTML =`
-                <h2>Name:${dest.name}</h2>               
+                <h2>Name:${dest.name}</h2>
                 <h3>Country:${dest.country}</h3>
                 <p style="font-weight: bold;">Season: ${dest.season}</p>
                 <p style="font-weight: bold;">Interest: ${dest.interest}</p>
                 <img src="${dest.image}" id="imageview" alt="${dest.name} image" style="width: 200px; height: auto; border-radius: 10px;">
-                <button type="submit" class="view-btn">View</button>
+                 <button type="submit" class="view-btn">View</button>
                 <button type="submit">To do List</button>
 
 
             `;
-            resultsContainer.appendChild(destinationElement)
+            
+                        resultsContainer.appendChild(destinationElement)
         });
          
         resultsContainer.addEventListener("click", function (event) {
             if (event.target.classList.contains("view-btn")) {
-               const img =document.getElementById('imageview')
+               const img =event.target.parentElement.querySelector("img")
                 img.style.display = img.style.display === "none" ? "block" : "none";
             
             }
         });
 
 
+
+
+
+
+
     }
-  
     searchForm.addEventListener('submit', search);
-
     async function init() {
-        destinations = await fetchDestinations();
-        displayResults(destinations); // Show all destinations initially
+        const destinations = await fetchDestinations();
+        displayResults(destinations);
     }
-
+    
+    
     init();
+
+  
+})   
+
+    
     
 
 
-}) 
 
 
     

@@ -55,9 +55,16 @@ option:hover{
     display:none ;
    margin: auto;
 }
-.destination{
+/*tination{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     
+}*/
+#places {
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap if screen is small */
+    justify-content: center; /* Center items horizontally */
+    gap: 180px; /* Spacing between cards */
+    padding: 80px;
 }
