@@ -20,6 +20,7 @@ body{
     justify-content: center;
     margin-top: 20px;
     flex-direction: column;
+    margin :auto;
     
 }
 #searchForm label{
@@ -67,4 +68,13 @@ option:hover{
     justify-content: center; /* Center items horizontally */
     gap: 180px; /* Spacing between cards */
     padding: 80px;
+}
+#viewList{
+    display:none;
+    display: flex;
+    flex-wrap: wrap;  /* Allow items to wrap if screen is small */
+    justify-content: center; /* Center items horizontally */
+    gap: 180px; /* Spacing between cards */
+    padding: 80px;
+   margin: auto;
 }
